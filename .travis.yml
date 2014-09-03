@@ -18,7 +18,7 @@ matrix:
     - python: "2.6"
       env: DJANGO=https://github.com/django/django/archive/master.zip
     - python: "2.6"
-      env: DJANGO=1.7
+      env: DJANGO=Django==1.7
 install:
   - if [ $DJANGO = 'Django==1.4.1' -o $DJANGO = 'Django==1.5' -o $DJANGO = 'Django==1.6' ]; then pip install south; fi
   - pip install $DJANGO
