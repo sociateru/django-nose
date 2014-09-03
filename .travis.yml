@@ -20,7 +20,7 @@ matrix:
     - python: "2.6"
       env: DJANGO=1.7
 install:
-  - if [ $DJANGO = 1.4.1 -o $DJANGO = 1.5 -o $DJANGO = 1.6 ]; then pip install south; fi
+  - if [ $DJANGO = 'Django==1.4.1' -o $DJANGO = 'Django==1.5' -o $DJANGO = 'Django==1.6' ]; then pip install south; fi
   - pip install $DJANGO
   - pip install -e .
 script:
